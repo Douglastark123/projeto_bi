@@ -10,8 +10,10 @@ def save(df: pd.DataFrame, table_name: str, chunksize: int = 10000) -> bool:
     """
     try:
         # Create connection string
+        url_params = f"?{POSTGRES_URL_PARAMS}" if POSTGRES_URL_PARAMS != "" else ""
+        port = f":{POSTGRES_PORT}" if POSTGRES_PORT != "" else ""
         db_connect = (
-            f"postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_HOST}:{POSTGRES_PORT}/{POSTGRES_DB}{f'?{POSTGRES_URL_PARAMS}' if POSTGRES_URL_PARAMS != '' else ''}"
+            f"postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_HOST}{port}/{POSTGRES_DB}{url_params}"
         )
         engine = create_engine(db_connect)
 
