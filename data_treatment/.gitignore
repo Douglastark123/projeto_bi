@@ -1,0 +1,15 @@
+data/*
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+venv/
+ENV/
+env/
+.venv/
+
+# Environment variables / secrets
+.env
