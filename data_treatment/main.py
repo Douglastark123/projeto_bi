@@ -8,6 +8,7 @@ from scripts import (
 )
 
 def main():
+    # print(DATASET_FILE)
     # 1. check if file exists
     if not file_exists(file=DATASET_FILE):
         return

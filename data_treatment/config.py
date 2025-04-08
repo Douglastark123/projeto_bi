@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 from pathlib import Path
 
 # Load .env file from project root
-env_path = Path(__file__).resolve() / ".env"
+env_path = Path(__file__).resolve().parent / ".env"
 load_dotenv(dotenv_path=env_path)
 
 # === Environment Variables === #
