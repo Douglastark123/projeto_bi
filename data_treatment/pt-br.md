@@ -6,10 +6,6 @@
   </span>
 </h1>
 
-Claro! Aqui está a tradução para o português brasileiro (pt-br):
-
----
-
 Apenas um pipeline simples de tratamento de dados.
 
 ## Pipeline
